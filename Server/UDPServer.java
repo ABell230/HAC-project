@@ -91,7 +91,11 @@ public class UDPServer
                 	if (!network.get(i).getIP().isReachable(10000))
                     {   
                         network.get(i).fail();
-                    }
+                    }	
+			else 
+		    {
+			network.get(i).active();
+		    }
                 }
                 //adds a new client to the list if it is not on the list
                 if(oldClient = false)
